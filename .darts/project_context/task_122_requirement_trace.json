@@ -1,0 +1,59 @@
+{
+  "task_id": 122,
+  "task_name": "CertEasy",
+  "execution_path": "planner_coder",
+  "complexity_tier": "simple",
+  "requirement_text": "On Navigating to Admin/ManageEducation page I'm getting the below error\n Administrative Error\nAn unexpected error occurred in the administrative area. Invalid column name 'InstituteName'.\n\nIf this issue persists, please check the system logs or contact technical support.\n\nFind the root cause and Add migration for this issue and fix this.\nNote: If the column is already exists in the SQL table do not create",
+  "generated_at": "2026-09-21T11:59:44.564Z",
+  "requirements": [
+    {
+      "req_id": "R-001",
+      "text": "Resolve the 'Invalid column name InstituteName' administrative error occurring when navigating to the page.",
+      "status": "covered",
+      "covered_by": [
+        "T-001"
+      ]
+    },
+    {
+      "req_id": "R-002",
+      "text": "Add a database migration to add the InstituteName column to the table if it does not already exist.",
+      "status": "covered",
+      "covered_by": [
+        "T-001"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "T-001",
+      "name": "Backend — Add migration for InstituteName column on Educations table",
+      "status": "completed",
+      "req_refs": [
+        "R-001",
+        "R-002"
+      ],
+      "files_written": [
+        "CertEasy.Data/Migrations/20260921115811_AddInstituteNameToEducation.cs",
+        "CertEasy.Data/Migrations/20260921115811_AddInstituteNameToEducation.Designer.cs"
+      ],
+      "module": "PlannerCoder",
+      "feature": "On Navigating to Admin/ManageEducation page I'm getting t...",
+      "validation": {
+        "compiled": true,
+        "spec_alignment": "unchecked"
+      }
+    }
+  ],
+  "coverage_summary": {
+    "total_requirements": 2,
+    "covered": 2,
+    "partial": 0,
+    "uncovered": 0,
+    "coverage_pct": 100,
+    "total_tasks": 1,
+    "tasks_completed": 1,
+    "tasks_failed": 0,
+    "files_written": 2,
+    "validation_status": "passed"
+  }
+}
